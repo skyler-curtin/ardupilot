@@ -235,7 +235,7 @@ public:
     Copter(void);
 
 private:
-
+   
     // key aircraft parameters passed to multiple libraries
     AP_MultiCopter aparm;
 

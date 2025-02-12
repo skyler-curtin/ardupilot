@@ -192,3 +192,5 @@ HAL_Semaphore &comm_chan_lock(mavlink_channel_t chan)
 }
 
 #endif  // HAL_GCS_ENABLED
+
+

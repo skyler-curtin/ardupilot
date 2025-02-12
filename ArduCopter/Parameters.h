@@ -195,7 +195,11 @@ public:
 
         // 97: RSSI
         k_param_rssi = 97,
-                
+        
+        // 98: ASY
+        k_param_asy_mdl_type = 98,
+        k_param_asy_mdl_block,
+
         //
         // 100: Inertial Nav
         //
@@ -462,6 +466,11 @@ public:
     AP_Int8         fs_crash_check;
     AP_Float        fs_ekf_thresh;
     AP_Int16        gcs_pid_mask;
+
+    // Asylon Params
+    //
+    AP_Int32        asy_mdl_type;  // Asylon Model Variant
+    AP_Int32        asy_mdl_block; // Asylon Block Variant
 
 #if MODE_THROW_ENABLED == ENABLED
     AP_Enum<ModeThrow::PreThrowMotorState>         throw_motor_start;

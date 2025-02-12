@@ -49,7 +49,7 @@ const AP_Param::Info Copter::var_info[] = {
     // @Increment: 1
     // @User: Advanced
     GSCALAR(sysid_my_gcs,   "SYSID_MYGCS",     255),
-
+    
     // @Param: PILOT_THR_FILT
     // @DisplayName: Throttle filter cutoff
     // @Description: Throttle filter cutoff (Hz) - active whenever altitude control is inactive - 0 to disable
@@ -96,6 +96,20 @@ const AP_Param::Info Copter::var_info[] = {
     // @Values: 0:None,1:Roll,2:Pitch,4:Yaw,8:AccelZ
     // @Bitmask: 0:Roll,1:Pitch,2:Yaw,3:AccelZ
     GSCALAR(gcs_pid_mask,           "GCS_PID_MASK",     0),
+    
+    // @Param: ASY_MDL_TYPE
+    // @DisplayName: Asylon Model Designation
+    // @Description: Used for configuring DroneHome settings.
+    // @Values: 0:Disabled, 1:Option1, 2:Option2, 3:Option3
+    // @User: Advanced
+    GSCALAR(asy_mdl_type, "ASY_MDL_TYPE", ASY_MDL_TYPE_DEFAULT),
+
+    // @Param: ASY_MDL_BLOCK
+    // @DisplayName: Model Block Variant
+    // @Description: Select the model block variant.
+    // @Values: 0:None, 1:Block-I, 2:Block-II, 3:Block-III, 4:Block-IV, 5:Block-V, 6:Block-VI, 7:Block-VII, 8:Block-VII, 9:Block-IX, 10:Block-X
+    // @User: Advanced
+    GSCALAR(asy_mdl_block, "ASY_MDL_BLOCK", ASY_MDL_BLOCK_DEFAULT),
 
 #if MODE_RTL_ENABLED == ENABLED
     // @Param: RTL_ALT
@@ -1839,3 +1853,5 @@ void Copter::convert_tradheli_parameters(void) const
 
 }
 #endif
+
+

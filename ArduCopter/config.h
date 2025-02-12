@@ -644,3 +644,12 @@
 #ifndef USER_PARAMS_ENABLED
   #define USER_PARAMS_ENABLED DISABLED
 #endif
+
+#ifndef ASY_MDL_BLOCK_DEFAULT
+ #define ASY_MDL_BLOCK_DEFAULT 0
+#endif
+
+#ifndef ASY_MDL_TYPE_DEFAULT
+ #define ASY_MDL_TYPE_DEFAULT 0
+#endif
+
